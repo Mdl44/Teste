@@ -55,9 +55,40 @@ endif()
 
 # NOTE: update executable name in .github/workflows/cmake.yml:25 when changing name here
 add_executable(${MAIN_EXECUTABLE_NAME}
-    main.cpp
-    generated/src/Helper.cpp
-    env_fixes.h
+        main.cpp
+        generated/src/Helper.cpp
+        env_fixes.h
+        sources/Driver.cpp
+        headers/Driver.h
+        sources/Car.cpp
+        headers/Car.h
+        sources/Team.cpp
+        headers/Team.h
+        sources/Player.cpp
+        headers/Player.h
+        sources/RaceWeekend.cpp
+        headers/RaceWeekend.h
+        headers/Season.h
+        sources/Season.cpp
+        headers/GameManager.h
+        sources/GameManager.cpp
+        headers/DryCondition.h
+        sources/DryCondition.cpp
+        headers/IntermediateCondition.h
+        sources/IntermediateCondition.cpp
+        headers/WeatherCondition.h
+        sources/WeatherCondition.cpp
+        headers/WetCondition.h
+        sources/WetCondition.cpp
+        headers/NightCondition.h
+        sources/NightCondition.cpp
+        headers/TopTeam.h
+        sources/TopTeam.cpp
+        headers/WeatherTypes.h
+        headers/Menu.h
+        sources/Menu.cpp
+        headers/Exceptions.h
+        sources/Exceptions.cpp
 )
 
 include(cmake/CompilerFlags.cmake)
@@ -66,6 +97,7 @@ include(cmake/CompilerFlags.cmake)
 
 # use SYSTEM so cppcheck and clang-tidy do not report warnings from these directories
 target_include_directories(${MAIN_EXECUTABLE_NAME} SYSTEM PRIVATE generated/include)
+target_include_directories(${PROJECT_NAME}  PRIVATE headers)
 # target_include_directories(${MAIN_EXECUTABLE_NAME} SYSTEM PRIVATE ext/<SomeHppLib>/include)
 target_include_directories(${MAIN_EXECUTABLE_NAME} SYSTEM PRIVATE ${SFML_SOURCE_DIR}/include)
 target_link_directories(${MAIN_EXECUTABLE_NAME} PRIVATE ${SFML_BINARY_DIR}/lib)
@@ -98,6 +130,10 @@ endif()
 
 
 include(cmake/CopyHelper.cmake)
+
 copy_files(FILES tastatura.txt COPY_TO_DESTINATION TARGET_NAME ${MAIN_EXECUTABLE_NAME})
+copy_files(FILES date_masini.txt COPY_TO_DESTINATION TARGET_NAME ${MAIN_EXECUTABLE_NAME})
+copy_files(FILES piloti.txt COPY_TO_DESTINATION TARGET_NAME ${MAIN_EXECUTABLE_NAME})
+copy_files(FILES circuite.txt COPY_TO_DESTINATION TARGET_NAME ${MAIN_EXECUTABLE_NAME})
 # copy_files(FILES tastatura.txt config.json DIRECTORY images sounds COPY_TO_DESTINATION TARGET_NAME ${MAIN_EXECUTABLE_NAME})
 # copy_files(DIRECTORY images sounds COPY_TO_DESTINATION TARGET_NAME ${MAIN_EXECUTABLE_NAME})

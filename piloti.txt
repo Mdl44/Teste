@@ -1,0 +1,71 @@
+10
+Mclaren F1
+3
+10 -5 -10 -5
+Lando Norris
+81 90 90 94 25 8 -5 -10
+Oscar Piastri
+80 92 88 90 23 7 5 -5
+Mercedes-AMG Petronas F1 Team
+3
+2 7 5 10
+Sir Lewis Hamilton
+98 92 90 91 39 8 15 15
+George Russel
+85 90 87 88 26 5 5 -5
+Scuderia Ferrari HP
+3
+8 5 -5 -10
+Charles Leclerc
+88 94 93 90 27 8 8 5
+Carlos Sainz Jr.
+87 95 87 87 30 5 -5 -10
+Red Bull Racing
+4
+5 5 5 -5
+Max Verstappen
+88 90 90 90 27 5 7 10
+Sergio Perez
+85 84 80 84 34 5 -5 -10
+Aston Martin F1 Team
+5
+4 5 -5 -7
+Fernando Alonso
+94 85 76 82 43 5 10 5
+Lance Stroll
+77 79 73 73 26 5 5 -5
+Visa Cash App RB
+7
+5 8 -5 -6
+Yuki Tsunoda
+71 72 72 79 24 5 -5 -10
+Liam Lawson
+79 73 72 69 22 5 -5 -10
+Williams Racing
+8
+5 -5 -10 5
+Alexander Albon
+76 77 75 81 28 5 -5 -10
+Franco Colapinto
+79 82 78 74 21 4 -5 -8
+Haas F1
+8
+5 5 10 -10
+Kevin Magnussen
+78 74 70 77 32 5 10 -5
+Nico Hulkenberg
+78 78 78 77 37 5 -5 -10
+Alpine F1
+8
+6 10 10 -10
+Pierre Gasly
+77 83 74 81 28 5 10 10
+Esteban Ocon
+76 82 73 80 28 3 10 10
+Stake F1 Team
+9
+4 -5 -10 5
+Valtteri Bottas
+80 65 87 75 35 5 -5 -10
+Guanyu Zhou
+69 70 75 74 25 3 -10 -10
