@@ -1,0 +1,67 @@
+num = input('Introduceti coeficientii numaratorului: ');
+den = input('Introduceti coeficientii numitorului: ');
+G = tf(num,den);
+stepplot(G);
+grid on;
+[z,p,k]=tf2zp(num,den);
+z=-z;
+p=-p;
+nr_int_z = 0;
+nr_int_p = 0;
+produs_zero = 1;
+produs_poli = 1;
+nr_poli = length(p);
+nr_zero = length(z);
+
+for i=1:nr_zero
+    if(z(i))==0
+        nr_int_z=nr_int_z+1;
+    else 
+    end
+    if(z(i))~=0
+        if(z(i))~=-inf
+            produs_zero=produs_zero*z(i);
+        else
+        end
+    else
+    end
+end
+for i=1:nr_poli
+    if(p(i))==0
+        nr_int_p=nr_int_p+1;
+    else
+        if(p(i))~=-inf
+            produs_poli = produs_poli*p(i);
+        end
+    end
+end
+
+Kc = k*produs_zero/produs_poli;
+systype=nr_int_p-nr_int_z;
+
+if(systype)==0
+    Kp=Kc;Kv=0;Ka=0;
+    err_p =1/(1+Kc); err_v=inf; err_a=inf;
+end
+
+if(systype)==1
+    Kp=inf; Kv=Kc; Ka=0;
+    err_p=0; err_v=1/Kv; err_a=inf;
+end
+
+if(systype)==2
+    Kp=inf; Kv=inf;Ka=Kc;
+    err_p=0;err_v=0;err_a=1/Ka;
+end
+
+if(systype)<0
+    Kp=0;Kv=0;Ka=0;
+    err_p=inf;err_v=inf; err_a=inf;
+end
+
+disp('Constantele erorii:')
+disp('Kp Kv Ka ')
+disp([Kp,Kv,Ka])
+disp('Tipul erorii:')
+disp('Pozitie   Viteza  Acceleratie')
+disp([err_p,err_v,err_a])
